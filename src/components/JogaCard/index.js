@@ -1,0 +1,1 @@
+export { JogaCard } from './JogaCard'

@@ -1,0 +1,16 @@
+.container {
+    display: block;
+    border: 2px solid;
+    border-radius: 36px;
+    font-family: 'SF UI Text Bold';
+    font-size: 18px;
+    padding: 20px 34px;
+}
+
+.container:hover {
+    filter: hue-rotate(20deg);
+}
+
+.container:active{
+    opacity: 0.8;
+}

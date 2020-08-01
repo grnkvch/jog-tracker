@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+}
+
+.icon{
+    height: 87px;
+    width: 87px;
+}
+
+.date{
+    display: block;
+    font-family: 'SF UI Text Regular';
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 9px;
+}
+
+.dataContainer{
+    margin-left: 46px;
+    font-family: 'SF UI Text Medium';
+    font-size: 14px;
+}
+
+.dataRow :first-child{
+    color: black;
+}
+
+.dataRow :last-child{
+    color: grey;
+    margin-left: 4px;
+}
+
+.dataRow:not(:first-of-type){
+    margin-top: 12px;
+}

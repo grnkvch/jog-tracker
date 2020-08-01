@@ -1,0 +1,126 @@
+.container {
+    display: flex;
+    height: 116px;
+    background-color: #7ed321;
+    padding: 30px 36px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 56px;
+    width: 147px;
+}
+
+.navContainer {
+    display: flex;
+    color: white;
+    justify-content: flex-end;
+}
+
+.routesContainer {
+    display: flex;
+    margin: 0 50px 0 0;
+    align-items: center;
+    font-family: 'SF UI Text Bold';
+    font-size: 14px;
+}
+
+.routesContainer :not(:first-child) {
+    margin: 0 0 0 45px;
+}
+
+.routesContainer > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.routesContainer > a:hover {
+    opacity: 0.8;
+}
+.routesContainer > a:active {
+    color: gray;
+}
+
+.activeRoute div::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 4px 0 -6px 0;
+    background-color: white ;
+}
+
+.burger{
+    display: none;
+}
+
+.checkbox {
+    display: none;
+}
+
+.burger>label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.burger span{
+    border-top: 6px solid white;
+    width: 28px;
+    border-radius: 2px;
+}
+
+.burger span:not(:first-of-type){
+    margin-top: 4px;
+}
+
+@media screen and (max-width: 675px) {
+    .routesContainer, .checkbox:checked+header .filter{
+        display: none;
+    }
+    .burger{
+        display: flex;
+        justify-content: center;
+        margin-left: 45px;
+    }
+    .checkbox:checked+header div.routesContainer{
+        display: block;
+        position: absolute;
+        top: 116px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+    .checkbox:checked+header.container {
+        background-color: white;
+    }
+    .checkbox:checked+header.container>img {
+        filter: sepia(100%) brightness(65%) hue-rotate(40deg) saturate(1000%) contrast(150%);
+    }
+
+    .activeRoute div::after{
+        content: "";
+        display: none;
+    }
+    .routesContainer > a {
+        color: black;
+        font-size: 25px;
+    }
+    .routesContainer > a.activeRoute {
+        color: #7ed321;
+    }
+    .checkbox:checked+header .burger span:nth-of-type(1) {
+        border-color: rgb(176 171 171);
+        transform: translateY(10px) rotate(45deg)
+    }
+    .checkbox:checked+header .burger span:nth-of-type(3) {
+        border-color: rgb(176 171 171);
+        transform: translateY(-10px) rotate(-45deg)
+    }
+
+  }
