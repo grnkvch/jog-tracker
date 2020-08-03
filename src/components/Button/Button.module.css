@@ -5,6 +5,9 @@
     font-family: 'SF UI Text Bold';
     font-size: 18px;
     padding: 20px 34px;
+    background-color: transparent;
+    outline: none;
+    position: relative;
 }
 
 .container:hover {
@@ -13,4 +16,15 @@
 
 .container:active{
     opacity: 0.8;
+}
+
+.loaderContainer{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

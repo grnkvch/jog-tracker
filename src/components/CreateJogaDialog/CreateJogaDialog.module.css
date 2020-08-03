@@ -44,7 +44,6 @@
     right: 27px;
 }
 
-
 .crossBtn:before, .crossBtn:after {
     position: absolute;
     left: 15px;
@@ -59,3 +58,42 @@
   .crossBtn:after {
     transform: rotate(-45deg);
   }
+
+@media screen and (max-width: 675px) {
+    .formContainer form{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }  
+    .formContainer form .input{
+        width: 100%;
+    }      
+    .container {
+        font-size: 13px;
+        padding: 64px 35px 35px;
+    }
+
+    .formContainer form label{
+        margin-bottom: 6px;
+    }  
+    .formContainer form:not(:first-child) {
+        margin-top: 20px;
+    }  
+
+    .crossBtn {
+        height: 18px;
+        width: 18px;
+        position: absolute;
+        top: 21px;
+        right: 30px;
+    }
+    
+    .crossBtn:before, .crossBtn:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 24px;
+        width: 3px;
+        background-color: white;
+      }
+}
